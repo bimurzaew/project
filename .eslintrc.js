@@ -1,9 +1,10 @@
 module.exports = {
     parser: '@typescript-eslint/parser',
-    plugins: ['@typescript-eslint'],
+    plugins: ['react', '@typescript-eslint', 'i18next'],
     extends: [
         'plugin:react/recommended',
-        'standard-with-typescript'
+        'standard-with-typescript',
+        'plugin:i18next/recommended'
     ],
     overrides: [
         {
@@ -38,7 +39,8 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/naming-convention': 'off',
-        '@typescript-eslint/no-misused-promises': 'off'
+        '@typescript-eslint/no-misused-promises': 'off',
+        'i18next/no-literal-string': ['error', { markupOnly: true }]
     },
     globals: {
         __IS_DEV__: true
