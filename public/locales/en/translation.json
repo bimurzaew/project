@@ -3,5 +3,7 @@
   "О нас": "About us",
   "Главная": "Main",
   "Страница не найдена": "Page not found",
-  "Загрузка": "Загрузка"
+  "Загрузка": "Loading",
+  "Произошла непредвиденна ошибка": "An unexpected error has occurred",
+  "Обновить страницу": "Refresh the page"
 }
