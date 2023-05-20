@@ -8,7 +8,10 @@ module.exports = {
     ],
     overrides: [
         {
-            files: ['*.ts', '*.tsx'],
+            files: ['*.ts', '*.tsx', '**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off'
+            },
             extends: [
                 'plugin:@typescript-eslint/recommended'
             ],
@@ -43,7 +46,11 @@ module.exports = {
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/no-misused-promises': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'i18next/no-literal-string':
+            [
+                'error',
+                { markupOnly: true, ignoreAttribute: ['data-testid'] }
+            ],
         'max-len': ['error', { ignoreComments: true, code: 100 }]
     },
     globals: {
